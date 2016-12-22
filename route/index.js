@@ -3,9 +3,10 @@ var router = express.Router();
 var helper = require("../helper");
 
 //Setup request for searching students
-router.get('/search_student', function(req,res,next){
+router.post('/search_student', function(req,res,next){
     //retrieve the search input
-    var input = { firstName: req.body.firstName || "",
+    var input = { 
+                  firstName: req.body.firstName || "",
                   lastName: req.body.lastName || "",
                   age: req.body.age || "",
                   school: req.body.school || ""

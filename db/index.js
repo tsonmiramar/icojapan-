@@ -2,7 +2,11 @@ var mongoose = require("mongoose");
 var config = require("../config");
 
 mongoose.Promise = global.Promise;
-mongoose.connect(config.dbURI);
+
+var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } }, 
+                replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };   
+
+mongoose.connect(config.dbURI,options);
 mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 mongoose.connection.once('open', function() {
   console.log("Connected to mongoLab database");

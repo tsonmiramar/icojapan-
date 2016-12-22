@@ -10,7 +10,7 @@ var ResultCardComponent = React.createClass({
   render: function() {
     var studentDetail = {
       age: 69,
-      school: "Bo Tuc",
+      school: "JAV",
       occupation: "Rapist",
       name: this.props.name
     }
