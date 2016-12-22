@@ -1,0 +1,5 @@
+
+{
+    "host":"http://localhost:3000",
+    "dbURI":"mongodb://admin:admin@ds133358.mlab.com:33358/icojapan_student"   
+}
