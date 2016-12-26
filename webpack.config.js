@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/foundation.min.js',
+    'script!foundation-sites/dist/js/foundation.min.js',
     'script!semantic-ui/dist/semantic.min.js',
     './app/app.jsx'
   ],
@@ -36,7 +36,11 @@ module.exports = {
       applicationStyles: 'app/styles/app.scss',
       schoolImage: 'app/images/school.png'
     },
-    extensions: ['', '.jsx', '.scss', '.js', '.json']
+    extensions: ['', '.jsx', '.scss', '.js', '.json','.css']
+  },
+  resolve: {
+     modulesDirectories: ["node_modules"],
+     extensions: ['', '.jsx', '.scss', '.js', '.json','.css']
   },
   module: {
     loaders: [
