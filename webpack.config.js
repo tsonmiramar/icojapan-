@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [
@@ -18,29 +19,25 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    filename: './public/bundle.js'
+    filename: path.join(__dirname,'public','bundle.js')
   },
   resolve: {
     root: __dirname,
     modulesDirectories: ['node_modules'],
     alias: {
-      Main: 'app/components/Main.jsx',
-      Nav: 'app/components/navigation/Nav.jsx',
-      LoginComponent: 'app/components/login/LoginComponent.jsx',
-      SearchFormComponent: 'app/components/search/SearchFormComponent.jsx',
-      SearchStudentsComponent: 'app/components/search/SearchStudentsComponent.jsx',
-      ResultCardComponent: 'app/components/search/ResultCardComponent.jsx',
-      ResultModalComponent: 'app/components/search/ResultModalComponent.jsx',
-      ResultsComponent: 'app/components/search/ResultsComponent.jsx',
-      Auth: 'app/api/Auth.js',
-      applicationStyles: 'app/styles/app.scss',
-      schoolImage: 'app/images/school.png'
+      Main: path.join(__dirname,'app','components','Main.jsx'),
+      Nav: path.join(__dirname,'app','components','navigation','Nav.jsx'),
+      LoginComponent: path.join(__dirname,'app','components','login','LoginComponent.jsx'),
+      SearchFormComponent: path.join(__dirname,'app','components','search','SearchFormComponent.jsx'),
+      SearchStudentsComponent: path.join(__dirname,'app','components','search','SearchStudentsComponent.jsx'),
+      ResultCardComponent: path.join(__dirname,'app','components','search','ResultCardComponent.jsx'),
+      ResultModalComponent: path.join(__dirname,'app','components','search','ResultModalComponent.jsx'),
+      ResultsComponent: path.join(__dirname,'app','components','search','ResultsComponent.jsx'),
+      Auth: path.join(__dirname,'app','api','Auth.js'),
+      applicationStyles: path.join(__dirname,'app','styles','app.scss'),
+      schoolImage: path.join(__dirname,'app','images','school.png')
     },
     extensions: ['', '.jsx', '.scss', '.js', '.json','.css']
-  },
-  resolve: {
-     modulesDirectories: ["node_modules"],
-     extensions: ['', '.jsx', '.scss', '.js', '.json','.css']
   },
   module: {
     loaders: [

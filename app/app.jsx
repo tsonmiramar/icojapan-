@@ -7,7 +7,7 @@ var Auth = require('Auth');
 var Main = require('Main');
 
 // Load foundation
-require('style!css!foundation-sites/dist/js/foundation.min.css')
+require('style!css!foundation-sites/dist/css/foundation.min.css')
 $(document).foundation();
 
 // Load semantic
