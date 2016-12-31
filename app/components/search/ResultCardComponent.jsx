@@ -22,7 +22,7 @@ var ResultCardComponent = React.createClass({
             <div className="header">{studentDetail.name}</div>
             <div className="meta">
               <div className="right floated author">
-                <img className="ui avatar image" src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/15219663_10207875298461068_6183857438634643977_n.jpg?oh=b163f3b5170f5ad9a671fafbf66864fe&oe=58BA43CF"/> Zin
+                <img className="ui avatar image" src="https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/15219663_10207875298461068_6183857438634643977_n.jpg?oh=b163f3b5170f5ad9a671fafbf66864fe&oe=58BA43CF"/> 
               </div>
               <span className="category">Animals</span>
             </div>
