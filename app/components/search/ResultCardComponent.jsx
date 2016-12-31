@@ -9,11 +9,13 @@ var ResultCardComponent = React.createClass({
   },
   render: function() {
     var studentDetail = {
-      age: 69,
-      school: "JAV",
-      occupation: "Rapist",
-      name: this.props.name
+      age: this.props.studentDetail.age,
+      school: this.props.studentDetail.school,
+      occupation: this.props.studentDetail.occupation,
+      name: this.props.studentDetail.firstName + " " + this.props.studentDetail.lastName
     }
+    console.log("This is from ResultCardComponent")
+    console.log(studentDetail);
     return(
         <div className="ui card">
           <div className="content">

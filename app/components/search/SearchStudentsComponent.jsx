@@ -6,35 +6,37 @@ var axios = require('axios');
 var SearchStudentsComponent = React.createClass({
   getInitialState: function () {
     return {
-      results: false
-    }
+      results: false,
+      data: null
+    };
   },
-  handleSearch: function() { 
+  handleSearch: function(searchInputs) {
+    var thisComponent = this;
     //handle search Application
     axios.post("/search_student", searchInputs)
          .then(function(response){
-             console.log(response); 
-             this.setState({
-             results: true
+             thisComponent.setState({
+               results:true,
+               data: response.data
              });
-         })
+          })
          .catch(function(err){
-              this.setState({
-              results: false
-              });
-              console.log(err); 
+           thisComponent.setState({
+             results: false,
+             data: null
+           });
+           console.log(err); 
          });
-  },
+},
 
   render: function() {
-    var {results} = this.state;
-    
+    var {results,data} = this.state;
     function renderResults() {
         if (results) {
           return (
             <div>
               <hr/>
-              <ResultsComponent />
+                <ResultsComponent studentData={data}/>
             </div>
           );
         }

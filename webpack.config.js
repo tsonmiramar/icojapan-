@@ -19,7 +19,7 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    filename: path.join(__dirname,'public','bundle.js')
+    filename: './public/bundle.js'
   },
   resolve: {
     root: __dirname,
